@@ -10,7 +10,7 @@ steps:
   args:
     - run
     - deploy
-    - gcp-lab-1
+    - gcp-lab-2
     - --image
     - gcr.io/$PROJECT_ID/httpd:$SHORT_SHA
     - --region
