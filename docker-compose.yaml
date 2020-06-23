@@ -1,0 +1,8 @@
+version: "3.5"
+services:
+  httpd:
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile
+    ports:
+      - 8080:8080

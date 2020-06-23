@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker container</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <style>
+       * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        h1, h2{
+            padding-top: 40px;
+
+            font-size: 82px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: #fff;
+        }
+
+        li{
+            font-size: 28px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+        }
+
+        figure, img{
+            margin: 0 auto;
+        }
+
+        figcaption{
+            display: block;
+            margin-left: 1047px;
+            margin-top: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+        }
+        
+        img{
+            margin-top: 20px;
+            display: block;
+            transition: box-shadow .7s;
+            cursor: pointer;
+        }
+
+        img:hover{
+            box-shadow: 0 0 5px #fff;
+        }
+
+        .container{
+            margin: 0;
+            padding: 0;
+            height: 1400px;
+            background: #0f0c29;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        .list{
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        h2{
+            display: none;
+        }
+
+        .like-panel{
+            margin-top: 45px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .like, .like-count{
+            font-size: 86px;
+            color: #fff;
+        }
+
+        .like-count{
+            padding-left: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Привет, Абакан!</h1>
+        <ul class="list">
+            <li>Все замечательно, не так ли?</li>
+        </ul>
+
+        <figure>
+            <img id="done" onclick="well.style.display = 'block'" src="https://im0-tub-ru.yandex.net/i?id=9a69cf055e3e2a38f52ea99c15abf8f7&n=13&exp=1" alt="">
+            <figcaption>Docker is power</figcaption>
+        </figure>
+        <div class="like-panel">
+            <span class="like"><i class="fas fa-heart"></i></span>
+            <span class="like-count"></span>
+        </div>
+        <h2 style="display: none;">Мы большие молодцы!</h2>
+    </div>
+
+    <script>
+        let done = document.querySelector('#done');
+        let well = document.querySelector('h2');
+
+        let like = document.querySelector('.like');
+        let likeCount = document.querySelector('.like-count');
+
+        
+        like.addEventListener('click', function(){
+            like.style.color = '#f00';            
+            likeCount.textContent++;
+
+            if (parseInt(likeCount.textContent, 10) >= 5){
+                well.style.display = 'block';
+            }
+            
+        })
+
+    </script>
+</body>
+</html>
